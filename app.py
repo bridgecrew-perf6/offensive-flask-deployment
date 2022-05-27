@@ -28,7 +28,6 @@ except ImportError:
 api_v1 = Blueprint("API_v1", __name__)
 
 CORS(api_v1)  # enable CORS on the API_v1 blue print
-api_v1.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @api_v1.route("/api/v1/users/")
