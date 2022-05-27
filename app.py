@@ -10,8 +10,8 @@ to add cross origin support to your flask app!
 import imp
 from flask import Flask, jsonify, Blueprint, request
 import logging
-from .models import Model
-from .models import Add
+from models.models import Model
+from models.models import Add
 
 try:
     from flask_cors import CORS  # The typical way to import flask-cors
