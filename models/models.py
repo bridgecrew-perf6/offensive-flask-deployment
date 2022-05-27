@@ -232,13 +232,13 @@ def preprocess(textdata):
 def load_models():
 
     file = open(
-        "/home/dlab/Documents/Flask/flask-react-CORS/api/vectoriser-ngram-(1,2).pickle",
+        "vectoriser-ngram-(1,2).pickle",
         "rb",
     )
     vectoriser = pickle.load(file)
     file.close()
     file = open(
-        "/home/dlab/Documents/Flask/flask-react-CORS/api/Sentiment-LR.pickle", "rb"
+        "Sentiment-LR.pickle", "rb"
     )
     LRmodel = pickle.load(file)
     file.close()
