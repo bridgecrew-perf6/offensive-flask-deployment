@@ -22,12 +22,13 @@ except ImportError:
     parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.sys.path.insert(0, parentdir)
 
-    from flask_cors import CORS
+    from flask_cors import CORS,cross_origin
 
 
 api_v1 = Blueprint("API_v1", __name__)
 
 CORS(api_v1)  # enable CORS on the API_v1 blue print
+api_v1.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @api_v1.route("/api/v1/users/")
