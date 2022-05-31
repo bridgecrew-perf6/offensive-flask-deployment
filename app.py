@@ -36,7 +36,7 @@ def list_users():
     return jsonify(user="listening")
 
 
-@api_v1.route("/api/v1/users/create", methods=["POST"])
+@api_v1.route("/api/v1/users/create/", methods=["POST"])
 def create_user():
     movie_data = request.get_json()
     result = Model(movie_data["description"])
