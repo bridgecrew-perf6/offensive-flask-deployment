@@ -27,7 +27,7 @@ except ImportError:
 
 api_v1 = Blueprint("API_v1", __name__)
 
-CORS(api_v1)  # enable CORS on the API_v1 blue print
+CORS(api_v1,support_credentials=True,resources={r"/*": {"origins": "*"}})  # enable CORS on the API_v1 blue print
 
 
 @api_v1.route("/api/v1/users/")
